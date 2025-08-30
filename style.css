@@ -301,8 +301,8 @@ h1 {
     /* New keyframe for mobile */
     @keyframes mobileFadeSlideUp {
         to {
-            opacity: 1;
-            transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
         }
     }
 
@@ -311,5 +311,6 @@ h1 {
         animation: mobileFadeSlideUp 1s ease forwards;
         transform: translateY(20px); /* Adjust the starting point for mobile */
         font-size: 24px; /* Adjust font size for better readability on smaller screens */
+        margin-top: 400px; /* Adjust margin for better positioning on smaller screens */
     }
 }
