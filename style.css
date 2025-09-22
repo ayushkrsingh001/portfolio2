@@ -12,13 +12,9 @@ h1 {
 
 .BackgroundVideo {
     position: fixed;
-    top: 50%;
-    left: 50%;
+    right: 0;
+    bottom: 0;
     min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
     object-fit: cover;
     z-index: -1;
 }
@@ -35,7 +31,7 @@ header{
     justify-content: space-between;
     align-items: center;
     background: rgba(255, 255, 255, 0.01);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(5px);
     box-shadow: 0 2px 10px rgba(226, 25, 176, 0.87);
     color: rgb(255, 255, 255);
@@ -95,20 +91,6 @@ header{
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     box-shadow: 0 2px 10px rgba(226, 25, 176, 0.87);
-}
-@media (max-width: 768px) {
-    .about-section {
-        margin-top: 740px; /* Adjust margin for smaller screens */
-        padding: 15px; /* Adjust padding for smaller screens */
-    }
-
-    .about-section h2 {
-        font-size: 24px; /* Adjust font size for smaller screens */
-    }
-
-    .about-section p {
-        font-size: 16px; /* Adjust font size for smaller screens */
-    }
 }
 
 .about-section h2 {
@@ -219,6 +201,59 @@ header{
     text-align: center;
 }
 
+.contact-section {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 70px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.01);  /* transparent black background */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(226, 25, 176, 0.87);
+}
+
+.contact-section h2 {
+    margin-top: 0;
+    padding-bottom: 0px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #f308df;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+
+.contact-section p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #f1f1f1;
+    max-width: 800px;
+    margin: auto;
+    color: #e0e0e0;
+    font-style: italic;
+}
+.contact-section, .projects-section {
+    flex: 1;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-section, .projects-section {
+        width: 90%;
+    }
+}
+
+
 /* For mobile view */
 @media (max-width: 768px) {
     .container {
@@ -278,53 +313,4 @@ h1 {
 
 .youtube a img:hover {
     transform: scale(1.2);
-}
-
-/* Other CSS code remains the same... */
-
-@keyframes fadeSlideUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero {
-    /* ... existing styles ... */
-}
-
-h1 {
-    margin-top: 100px;
-    color: aliceblue;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeSlideUp 1.5s ease forwards;
-}
-
-/* For mobile view */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skills-section, .projects-section {
-        width: 90%;
-    }
-
-    /* New keyframe for mobile */
-    @keyframes mobileFadeSlideUp {
-        to {
-        opacity: 1;
-        transform: translateY(0);
-        }
-    }
-
-    h1 {
-        /* Override the desktop animation with the mobile one */
-        animation: mobileFadeSlideUp 1s ease forwards;
-        transform: translateY(20px); /* Adjust the starting point for mobile */
-        font-size: 24px; /* Adjust font size for better readability on smaller screens */
-        margin-top: 400px; /* Adjust margin for better positioning on smaller screens */
-    }
 }
