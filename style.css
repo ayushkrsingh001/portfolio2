@@ -242,6 +242,7 @@ header{
     border-radius: 10px;
     text-align: center;
 }
+/* For mobile view */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
